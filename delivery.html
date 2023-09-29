@@ -1,64 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Order Pickup</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Order Pickup</title>
 
-        <link rel="stylesheet" href="css/base.css">
-    </head>
-    <body>
-        <nav class="navbar bg-danger navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand text-warning" href="index.html">
-                    <img src="images/pizza.svg" alt="Pizza" width="30" height="24">
-                    Thomas's Pizza
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active text-warning" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Other
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="delivery.html">Order Delivery</a></li>
-                                <li><a class="dropdown-item" href="pickup.html">Order Pickup</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="feedback.html">Feedback</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <style>
+        .form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <nav class="navbar bg-danger navbar-expand-lg">
         <div class="container">
-            <div class="content">
-                <div class="header mt-5">
-                    <h2 class="text-warning">Apologies! We aren't accepting pickup orders right now.</h2>
-                </div>
+            <a class="navbar-brand text-warning" href="index.html">
+                <img src="images/pizza.svg" alt="Pizza" width="30" height="24">
+                Thomas's Pizza
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-warning" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Other
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="delivery.html">Order Delivery</a></li>
+                            <li><a class="dropdown-item" href="pickup.html">Order Pickup</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="feedback.html">Feedback</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
-    </body>
+    </nav>
+    
+    <div class="container form">
+        <div class="content">
+            <h2>Order Form</h2>
+            <form id="addressForm">
+                <div class="form-group">
+                    <label for="fullName">Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="streetAddress">Street Address</label>
+                    <input type="text" class="form-control" id="streetAddress" placeholder="Enter your street address"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <select class="form-control" id="state" required>
+                        <option value="" disabled selected>Select your state</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" class="form-control" id="zipCode" placeholder="Enter your ZIP code" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addressForm = document.getElementById("addressForm");
+            const nameInput = document.getElementById("fullName");
+            const stateInput = document.getElementById("state");
+            const zipCodeInput = document.getElementById("zipCode");
+
+            addressForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const fullName = nameInput.value;
+                const streetAddress = document.getElementById("streetAddress").value;
+                const city = document.getElementById("city").value;
+                const state = stateInput.value;
+                const zipCode = zipCodeInput.value;
+
+                if (zipCode.length !== 5 || isNaN(zipCode)) {
+                    alert("ZIP code is wrong.");
+                    zipCodeInput.focus();
+                    return;
+                }
+
+                if (fullName.length <= 2 || fullName.substr(0, 1) !== fullName.substr(0, 1).toUpperCase()) {
+                    alert("Name is wrong.");
+                    nameInput.focus();
+                    return;
+                }
+
+                if (state != "Virginia") {
+                    alert("State is wrong.");
+                    stateInput.focus();
+                    return;
+                }
+
+                function saveFormDataToLocalStorage(formData) {
+                    let savedData = JSON.parse(localStorage.getItem("addressData")) || [];
+                    savedData.push(formData);
+                    localStorage.setItem("addressData", JSON.stringify(savedData));
+                }
+
+                const formData = {
+                    fullName,
+                    streetAddress,
+                    city,
+                    state,
+                    zipCode,
+                };
+                saveFormDataToLocalStorage(formData);
+
+                window.location.href = "order.html";
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const states = [
+                "Alabama", "Alaska", "Arizona", "Arkansas", "California",
+                "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
+                "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+                "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
+                "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
+                "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey",
+                "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+                "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+                "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
+                "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
+            ];
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+            const stateSelect = document.getElementById("state");
+
+            shuffleArray(states);
+
+            states.forEach(function (state) {
+                const option = document.createElement("option");
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+        });
+    </script>
+</body>
+
 </html>
